@@ -1,0 +1,9 @@
+version: '3'
+services:
+  monitor:
+    build:
+      context: .
+    container_name: eth-balance-monitor
+    ports:
+      - "8080:8080"
+    command: -url https://www.ethercluster.com/etc -accounts 0xc7E37C5739Cee513286FA0656146474539C9eb66:100
